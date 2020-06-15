@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Form Submission</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Edit</h1>
+	<form action="#" th:action="@{/update}" th:object="${person}"
+		method="post">
+		<p>
+			<input type="text" th:field="*{firstName}">
+		<p>
+			<input type="text" th:field=" *{lastName}">
+		</p>
+		<p>
+			<input type="text" th:field=" *{age}">
+		</p>
+		<p>
+			<input type="submit" value="Save" />
+		</p>
+	</form>
+</body>
+</html>
